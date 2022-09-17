@@ -25,6 +25,10 @@ ACCENT2: E38B29
     height: 100vh; 
   }
 
+  .header__img{
+    display: none;
+  }
+
   img{
     width: 400px;
     height: 400px;
