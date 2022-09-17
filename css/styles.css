@@ -21,6 +21,10 @@ ACCENT2: E38B29
     font-weight: 700;
   }
 
+  header{
+    height: 100vh; 
+  }
+
   img{
     width: 400px;
     height: 400px;
