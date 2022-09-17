@@ -8,12 +8,17 @@ ACCENT2: E38B29
 
 */
 
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 
   body{
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
   }
 
   img{
