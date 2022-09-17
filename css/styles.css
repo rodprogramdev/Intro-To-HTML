@@ -23,6 +23,11 @@ ACCENT2: E38B29
 
   header{
     height: 100vh; 
+    background-image: url("../images/dog-photo-withApp4.png");
+    background-size:cover;
+    background-position: bottom right;
+    background-color: #FDEEDC; /*PRIMARY*/
+    /* color: #fff; */
   }
 
   .header__img{
