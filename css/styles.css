@@ -21,6 +21,7 @@ body {
 }
 
 header {
+  /* position: relative; */
   height: 100vh;
   background-image: url("../images/dog-photo-withApp4.png");
   background-size: cover;
@@ -47,7 +48,16 @@ header {
 }
 
 .navbar-nav{
-  padding: 5% 8%;
+  padding: 5% 8%; 
+  position:sticky;
+}
+
+.header__heading{
+  position: relative;
+  top: 25%;
+  left:5%;
+  width: 40%;
+
 }
 
 .header__img {
