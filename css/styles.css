@@ -8,34 +8,40 @@ ACCENT2: E38B29
 
 */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+header {
+  height: 100vh;
+  background-image: url("../images/dog-photo-withApp4.png");
+  background-size: cover;
+  background-position: bottom right;
+  background-color: #fdeedc; /*PRIMARY*/
+  /* color: #fff; */
 }
 
 
-  body{
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-  }
-
-  header{
-    height: 100vh; 
-    background-image: url("../images/dog-photo-withApp4.png");
-    background-size:cover;
-    background-position: bottom right;
-    background-color: #FDEEDC; /*PRIMARY*/
-    /* color: #fff; */
-  }
-
-  .header__img{
-    display: none;
-  }
-
-  img{
-    width: 400px;
-    height: 400px;
-  }
+.navColor{
+  background-color: #fdeedc !important;
   
+}
+
+.header__img {
+  display: none;
+}
+
+img {
+  width: 400px;
+  height: 400px;
+}
+
+/*BOOTSTRAP CDN MINIFIED*/
