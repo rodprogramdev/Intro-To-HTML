@@ -30,9 +30,9 @@ header {
 }
 
 
+
 .navColor{
   background-color: #fdeedc !important;
-  
 }
 
 .container-fluid{
@@ -44,6 +44,10 @@ header {
   font-size:2rem;
   padding: 0.5% 10% 0;
   text-transform: uppercase;
+}
+
+.navbar-nav{
+  padding: 5% 8%;
 }
 
 .header__img {
