@@ -30,8 +30,6 @@ header {
   /* color: #fff; */
 }
 
-
-
 .navColor{
   background-color: #fdeedc !important;
 }
@@ -69,4 +67,17 @@ img {
   height: 400px;
 }
 
-/*BOOTSTRAP CDN MINIFIED*/
+
+/**************************************MEDIA QUERRIES********************************/
+/**FIRST BREAKPOINT MEDIA MAX-WIDTH: 600px**/
+
+/*HEADER SECTION*/
+@media only screen and (max-width: 600px){
+   header{
+    background-image: none;
+   }
+
+
+}
+
+
