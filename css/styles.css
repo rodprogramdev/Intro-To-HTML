@@ -86,6 +86,14 @@ img {
     font-size: 1rem;
    }
 
+   .header__heading{
+    position:absolute;
+    width: 75%;
+    top:33%;
+    left: 15%;
+   }
+   /**NOTE TO SELF: Issue with the dropdown link"*/
+
 
 }
 
