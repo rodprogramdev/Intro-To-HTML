@@ -164,6 +164,11 @@ img {
 
    h1{
     z-index: 1;
+    font-size: 1.8rem;
+   }
+
+   p{
+    font-size: .8rem;
    }
 
 }
