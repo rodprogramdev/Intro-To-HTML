@@ -21,7 +21,7 @@ body {
 }
 
 header {
-  /* position: relative; */
+  position: relative;
   height: 100vh;
   background-image: url("../images/dog-photo-withApp4.png");
   background-size: cover;
@@ -73,6 +73,8 @@ img {
 
 /*HEADER SECTION*/
 @media only screen and (max-width: 600px){
+ 
+
    header{
     background-image: none;
    }
@@ -85,6 +87,13 @@ img {
    .navbar-nav{
     font-size: 1rem;
    }
+  
+    /**NOTE TO SELF: Issue with the dropdown link"*/
+
+   .dropdown{
+    position: relative;
+    z-index: 2;
+   }
 
    .header__heading{
     position:absolute;
@@ -92,8 +101,50 @@ img {
     top:33%;
     left: 15%;
    }
-   /**NOTE TO SELF: Issue with the dropdown link"*/
 
+   .header__img{
+     position: absolute;
+     top: 75%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     display: inline-block;
+     width: 12rem;
+     height: 12rem;
+     padding: 2%;
+     margin: 0;
+     animation: fadeUp 1s ease-in;
+   }
+
+   .header__img img{
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      border: 5px solid black;
+   }
+   
+   @keyframes fadeUp{
+     0%{
+      opacity:0;
+      top:80%;
+     }
+
+     50%{
+      opacity: 0.5;
+     }
+
+     100%{
+      opacity: 1;
+      /* top: 75%; */
+     }
+    
+    
+   }
+
+  
+
+   h1{
+    z-index: 1;
+   }
 
 }
 
