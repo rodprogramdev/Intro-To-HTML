@@ -85,9 +85,17 @@ img {
   height: 400px;
 }
 
+/**SECTION ABOUT**/
+
+.about{
+  min-height: 65vh;
+}
 
 
-/**SECTION1 GALLERY**/
+
+
+
+/**SECTION GALLERY**/
 
 .gallery{
   height: 80vh;
@@ -139,7 +147,9 @@ img {
    }
 
   
-    /**NOTE TO SELF: Issue with the dropdown link"*/
+    /**NOTE TO SELF: Issue with the dropdown link"
+    It was the declartion of the position sticky property.
+    */
 
 
    .header__heading{
@@ -148,7 +158,7 @@ img {
     top:33%;
     left: 15%;
     padding: 2%;
-    background-color:green;
+    /* background-color:green; */
    }
 
 
