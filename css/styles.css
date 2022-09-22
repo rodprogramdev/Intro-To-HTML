@@ -124,19 +124,23 @@ img {
 }
 
 
-
-
-
 /**SECTION GALLERY**/
 
 .gallery{
-  height: 80vh;
+  height:100vh;
+  padding: 5%;
 }
 
-.gallery__img{
+.card{
+  /* background-color: orangeRed; */
+  width: 18rem;
+  margin: 0 auto;
+}
+
+/* .gallery__img{
   height: 15rem;
   width: 15rem;
-}
+} */
 
 
 .inner{
@@ -144,11 +148,11 @@ img {
 }
 
 .inner img{
-  transition: all 1.5s ease;
+  transition: all 1s ease;
 }
 
 .inner:hover img{
-  transform: scale(1.5);
+  transform: scale(1.1);
   cursor:pointer;
 }
 
