@@ -1,188 +1,312 @@
 <!DOCTYPE html>
-
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="description" content="Dog Photo Blog">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DOG PHOTO APP</title>
+    <title>RBSL's Dog Photo Blog</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="scripts/weather.js" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+    </style>
+  </head>
 
-  <!--BOOTSTRAP CSS EXTERNAL LINKS-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light navColor">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">RBSL's DOG BLOG</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-  <!--CUSTOM CSS LINK LOCAL COPY-->
-  <link rel="stylesheet" href="css/styles.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
-  </style>
-</head>
-
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navColor">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Dog Photo App</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#dogGallery">Dog Gallery</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Dog Rescue
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-
-          </ul>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#dogGallery">Dog Gallery</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Dog Rescue</a
+                >
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://paws.org.ph/dogs/"
+                      target="_blank"
+                      >Paws PH</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.philanimalrescue.org/"
+                      target="_blank"
+                      >Phil Animal rescue</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.facebook.com/mbypras/"
+                      target="_blank"
+                      >Mbypras</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
+
+      <div class="header__heading">
+        <h1 class="header__h1">
+          "True friendship is the love of your furry bestfriend"
+        </h1>
+        <p>
+          Be a dog foster parent
+          <a href="https://paws.org.ph/dogs/" target="_blank">Go to Paws PH</a>
+        </p>
       </div>
-    </nav>
-    <div class="header__heading">
-      <h1 class="header__h1">"True friendship is the love of your furry bestfriend"</h1>
-      <p>Be a dog foster parent <a href="https://paws.org.ph/dogs/" target="_blank">Go to Paws PH</a></p>
-    </div>
-
-    <!--Mobile responsive image version-->
-
-    <div class="header__img">
-      <img src="images/dog-photo-withApp5-small.png" alt="Mihawk my dog">
-    </div>
-  </header>
-
-  <main>
-    <!--*******************************************ABOUT SECTION****************************************************-->
-
-    <section>
-      <div class="about" id="about">
-        <h2 class="about__h2">About</h2>
-        <p class="about__para">Hi! Welcome this is a simple site that I hope
-          will give some basic information related to our
-          cute and loyal furry friends.</p>
+      <div class="header__img">
+        <img src="images/dog-photo-withApp5-small.png" alt="Mihawk my dog" />
       </div>
-    </section>
+    </header>
 
-    <!--*******************************************DOG GALLERY SECTION****************************************************-->
-    <section>
-      <div class="container-fluid gallery" id="dogGallery">
-        <h2>DOG GALLERY</h2>
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="card inner">
-              <img class="card-img-top"
-              src="https://www.pixel-creation.com/wp-content/uploads/puppy-wallpaper-and-background-image-1680x1050-id467417-800x800.jpg"
-              alt="Cute Dog" />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">My First Pet</p>
+    <main>
+      <section>
+        <div class="login">
+          <div class="d-flex">
+            <div class="login__sign-up">
+              <h4>SIGN UP</h4>
+              <p>Sign up here!</p>
+              <form action="includes/signup.inc.php" method="post">
+                <input type="text" name="uid" placeholder="Username">
+                <input type="text" name="pwd" placeholder="Password">
+                <input type="password" name="pwdrepeat" placeholder="Repeat Password">
+                <input type="text" name="email" placeholder="E-mail">
+                <br>
+                <button type="submit" name="submit">SIGN UP </button>
+              </form>
+            </div>
+            <div class="login__login">
+              <h4>LOGIN</h4>
+              <form action="includes/login.inc.php" method="post">
+                <input type="text" name="uid" placeholder="Username">
+                <input type="text" name="pwd" placeholder="Password">
+                <br>
+                <button type="submit" name="submit">LOGIN</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <!--*********************FIRST SECTION **************************-->
+      <section>
+        <div class="about" id="about">
+          <h2 class="about__h2">About</h2>
+          <p class="about__para">
+            Hi! Welcome this is a simple site that I hope will give some basic
+            information related to our cute and loyal furry friends.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="container-fluid gallery" id="dogGallery">
+          <h2>PETS GALLERY</h2>
+          <br />
+          <div class="row">
+            <div class="col-lg-6 col-sm-4">
+              <div class="card inner">
+                <img
+                  class="card-img-top"
+                  src="https://source.unsplash.com/1600x900/?dogs"
+                  alt="Cute Dog"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Dogs</h5>
+                  <p>My first pet</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-4">
+              <div class="card inner">
+                <img
+                  class="card-img-top"
+                  src="https://source.unsplash.com/1600x900/?cats"
+                  alt="Cute Dog"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Cats</h5>
+                  <p>My second pet</p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="card inner" >
-              <img class="card-img-top"
-              src="https://www.pixel-creation.com/wp-content/uploads/puppy-wallpaper-and-background-image-1680x1050-id467417-800x800.jpg"
-              alt="Cute Dog" />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">My Second Pet</p>
+          <a
+            class="gallery__link"
+            href="https://rodprogramdev.github.io/Dog-Photo-Gallery/"
+            >More Photos</a
+          >
+        </div>
+      </section>
+
+      <br />
+      <br />
+      <!--*******************Featured section SECTION ************************-->
+      <section>
+        <div class="container-fluid blog" id="blog">
+          <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <h3>Featured Articles:</h3>
+              <div class="carousel-item active">
+                <img
+                  src="images/pexels-daniel-frank-343241.jpg"
+                  alt="Cute Dog"
+                  class="d-block w-100"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="images/pexels-rodrigo-bonzerr-s-lopez-11937455.jpg"
+                  alt="My dogs love pizza"
+                  class="d-block w-100"
+                />
               </div>
             </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
         </div>
-        <a href="#" class="gallery__link">More Photos</a>
-      </div>
-    </section>
+      </section>
 
+      <!--************************* FORM SECTION ***********************-->
+      <section>
+        <div class="container-fluid form">
+          <h2>CONTACT FORM:</h2>
+          <!-- <form
+            action="https://rodprogramdev.github.io/DogPhotoAppTestSubmitURL/"
+          >
+        
+        </form> -->
 
-    <!--*******************************************SECTION****************************************************-->
-
-    <section>
-      <!-- <h2>DOG LISTS</h2> -->
-
-
-      <h3>Things dogs Love</h3>
-      <ul>
-        <li>Seeing their human</li>
-        <li>Dog treats</li>
-        <li>Dog toys</li>
-      </ul>
-      <figure>
-        <img src="images/pexels-rodrigo-bonzerr-s-lopez-11937455.jpg" alt="A picture of pizza" />
-        <figcaption>My dogs <em>love</em> pizza</figcaption>
-      </figure>
-      <h3>Three things dogs hate:</h3>
-      <ol>
-        <li>Cats</li>
-        <li>Taking bath</li>
-        <li>Being ignored</li>
-      </ol>
-      <figure>
-        <img
-          src="https://www.pixel-creation.com/wp-content/uploads/puppy-wallpaper-and-background-image-1680x1050-id467417-800x800.jpg"
-          alt="A cute dog picture" />
-        <figcaption>Dogs <strong>hates</strong> cats</figcaption>
-      </figure>
-    </section>
-
-    <!--*******************************************SECTION 2****************************************************-->
-    <section>
-      <h2>DOG FORM</h2>
-      <form action="https://francisken03.github.io/Thank-You-Page/">
-        <fieldset>
-          <legend>Is your dog an indoor or outdoor dog</legend>
-          <label><input type="radio" id="indoor" name="indoor-outdoor" value="indoor" checked> Indoor</label>
-          <label><input type="radio" id="outdoor" name="indoor-outdoor" value="outdoor"> Outdoor</label>
-        </fieldset>
-        <fieldset>
-          <legend>What is your dogs personality?</legend>
-          <input type="checkbox" id="loving" value="loving" name="personality" checked> <label
-            for="loving">Loving</label>
-          <input type="checkbox" id="lazy" value="lazy" name="personality"> <label for="lazy">Lazy</label>
-          <input type="checkbox" id="energetic" value="energetic" name="personality"> <label
-            for="energetic">Energetic</label>
-
-        </fieldset>
-
-        <input type="text" name="cutedogsurl" placeholder="cute dogs url" required>
-        <button type="submit"> Submit </button>
-      </form>
-    </section>
-  </main>
-  <footer>
-    <p>No copyright - <a href="https://www.freecatphotoapp.com/" target="_blank">Inspired by FreeCodeCamp Cat Photo
-        App</a></p>
-  </footer>
-
-
-
-
-  <!--BOOTSTRAP JS BUNDLE LINKS-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-
-</body>
-
+          <form action="/">
+            <div class="info">
+              <input
+                class="form-input"
+                type="text"
+                name="name"
+                placeholder="Full name"
+              />
+              <input
+                class="form-input"
+                type="text"
+                name="name"
+                placeholder="Email"
+              />
+              <input
+                class="form-input"
+                type="text"
+                name="name"
+                placeholder="Phone number"
+              />
+              <input
+                class="form-input"
+                type="text"
+                name="name"
+                placeholder="Website"
+              />
+            </div>
+            <p>Message</p>
+            <div>
+              <textarea rows="2"></textarea>
+            </div>
+            <button class="form-btn" type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy;2022 Made with ❤ Rodrigo Bonzerr S. Lopez</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
+    ></script>
+  </body>
 </html>

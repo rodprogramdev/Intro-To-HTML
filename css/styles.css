@@ -1,13 +1,3 @@
-/*
-COLOR PALETTE: 
-https://colorhunt.co/palette/fdeedcffd8a9f1a661e38b29
-PRIMARY: FDEEDC
-SECONDARY: FFD8A9
-ACCENT1: F1A661
-ACCENT2: E38B29
-
-*/
-
 * {
   margin: 0;
   padding: 0;
@@ -15,9 +5,49 @@ ACCENT2: E38B29
 }
 
 body {
-  text-align: center;
+  /* text-align: center; */
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  background-size: contain;
+
+  background-repeat: auto;
+}
+
+.container-fluid {
+  background-color: hsl(33, 89%, 93%);
+  font-size: 1.5rem;
+}
+
+.navColor {
+  background-color: #fdeedc !important;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  padding: 0.5% 10% 0;
+  text-transform: uppercase;
+}
+
+.navbar-nav {
+  padding: 5% 8%;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+    padding: 0;
+    text-transform: uppercase;
+  }
+  .navbar-nav {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .dropdown {
+    position: relative;
+    z-index: 2;
+  }
 }
 
 header {
@@ -26,247 +56,462 @@ header {
   background-image: url("../images/dog-photo-withApp4.png");
   background-size: cover;
   background-position: bottom right;
-  background-color: #fdeedc; /*PRIMARY*/
-  /* color: #fff; */
-}
-
-.navColor{
-  background-color: #fdeedc !important;
-}
-
-.container-fluid{
-  background-color: hsl(33, 89%, 93%);
-  font-size: 1.5rem;
-}
-
-.navbar-brand{
-  font-size:2rem;
-  padding: 0.5% 10% 0;
-  text-transform: uppercase;
-}
-
-.navbar-nav{
-  padding: 5% 8%; 
-  /* position:sticky; */
-}
-
-.header__heading{
-  position: relative;
-  top: 25%;
-  left:5%;
-  width: 40%;
-
-}
-
-h1,p{
-  animation: fadeIn 2s ease-in;
-}
-
-@keyframes fadeIn{
-  0%{
-    opacity:0;
-  }
-
-  50%{
-    opacity: 0.5;
-  }
-
-  100%{
-    opacity: 1;
-  }
+  background-color: #fdeedc; /*PRIMARY COLOR*/
+  color: #fff;
 }
 
 .header__img {
   display: none;
 }
 
-img {
-  width: 400px;
-  height: 400px;
+@media only screen and (max-width: 600px) {
+  header {
+    background-image: none;
+  }
+
+  .header__img {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: inline-block;
+    width: 12rem;
+    height: 12rem;
+    padding: 2%;
+    margin: 0;
+    /* background-color: red; */
+    animation: fadeUp 1s ease-in;
+  }
+
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      top: 80%;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 1;
+      top: 75%;
+    }
+  }
+
+  .header__img img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid black;
+    background-color: white;
+  }
 }
 
-/**SECTION ABOUT**/
+/*************************LOGIN FORM**************************************/
 
-.about{
+.login{
+  height: 100vh;
+}
+
+
+
+/******************************ABOUT SECTION**************************/
+
+
+.about {
+  /* height: 100vh; */
+  background-image: linear-gradient(
+      to right,
+      rgba(253, 238, 220, 0.271),
+      rgba(241, 167, 97, 0.243)
+    ),
+    url("https://source.unsplash.com/1600x900/?dogs"); /*url("../images/pexels-lumn-406014.jpg");*/
   min-height: 65vh;
-  background-image: linear-gradient(to right, rgba(253, 238, 220, 0.271), rgba(241, 167, 97, 0.243)),
-  url("https://github.com/WD16-KodeGo-Batch/image-sources/blob/main/pexels-lumn-406014.jpg?raw=true");
+  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  padding-top:5%;
 }
 
+.about__h2 {
+  position: relative;
+  z-index: 2;
+}
 
-/* .about__h2{
-  
-} */
-
-.about__para{
+.about__para {
   margin-top: 1.3%;
-  width: 37%;
-  background-color:rgba(227,140,41, 0.661);
+  width: 35%;
   position: absolute;
-  top:50%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: rgba(227, 140, 41, 0.661);
+  /* background-color: #1918182e;  */
   padding: 5%;
-  border-top-left-radius: 50px;
-  border-bottom-right-radius:50px;
+
   -webkit-border-top-left-radius: 50px;
-  -webkit-border-bottom-right-radius:50px;
-  -moz-border-top-left-radius: 50px;
-  -moz-border-bottom-right-radius:50px;
+  -webkit-border-bottom-right-radius: 50px;
+  -moz-border-radius-topleft: 50px;
+  -moz-border-radius-bottomright: 50px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  z-index: 0;
+}
+
+.header__heading {
+  position: relative;
+  top: 25%;
+  left: 5%;
+  width: 40%;
+  color: black;
+}
+
+h1,
+p {
+  color: black;
+  animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header__heading {
+    position: absolute;
+    width: 75%;
+    top: 33%;
+    left: 15%;
+    border-radius: 1%;
+    /* background-color: #00000043; */
+    padding: 2%;
+  }
+
+  h1 {
+    z-index: 1;
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+@media speech {
+  h1 {
+    color: red;
+  }
+}
+
+/*************************ABOUT SECTION*************************/
+
+.about {
   text-align: center;
-
+  padding-top: 5%;
 }
 
-
-/**SECTION GALLERY**/
-
-.gallery{
-  height:100vh;
-  padding: 5%;
+.about h2 {
+  margin-bottom: 5%;
 }
 
-.card{
-  /* background-color: orangeRed; */
+.about p {
+  text-align: center;
+}
+
+.card {
   width: 18rem;
-  height: 25rem; 
+  height: 25rem;
   margin: 0 auto;
-  box-shadow: 0px 5px 6px 1px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 0px 5px 6px 1px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 5px 6px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 6px 1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 5px 6px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 5px 6px 1px rgba(0, 0, 0, 0.75);
 }
 
-/* .gallery__img{
-  height: 15rem;
-  width: 15rem;
-} */
-
-
-.inner{
-  overflow: hidden;
+.inner {
+  overflow: hidden; /*using the overflow property we are just hiding the overflow content*/
 }
 
-.inner img{
-  transition: all 1s ease;
+.inner img {
+  transition: transform 1s ease;
 }
 
-.inner:hover img{
+.inner:hover img {
   transform: scale(1.1);
-  cursor:pointer;
+  cursor: pointer;
 }
 
-a{
+.gallery {
+  height: 100vh;
+  padding: 5%;
+  text-align: center;
+}
+
+.gallery__img {
+  /* height: 100%; */
+  width: 100%;
+}
+
+a {
   text-decoration: none;
   color: black;
 }
 
-.gallery__link::after{
-  content: '';
+.gallery__link::after {
+  content: "";
   width: 0;
   height: 2px;
+  background: #f1a661;
   display: block;
   margin: auto;
-  transition: .3s;
-  background-color: #F1A661;
+  transition: 0.5s;
 }
 
-.gallery__link:hover::after{
+.gallery__link:hover::after {
   width: 5%;
 }
 
-
-
-/**************************************MEDIA QUERRIES********************************/
-/**FIRST BREAKPOINT MEDIA MAX-WIDTH: 600px**/
-
-/*HEADER SECTION*/
-@media only screen and (max-width: 600px){
-   header{
-    background-image: none;
-   }
-
-   .navbar-brand{
-      font-size: 1.5rem;
-      padding: 0;
-      
-   }
-
-   .navbar-nav{
-    font-size: 1rem;
-   }
-
-   .dropdown{
-    position: relative;
-    z-index: 2;
-   }
-
-  
-    /**NOTE TO SELF: Issue with the dropdown link"
-    It was the declartion of the position sticky property.
-    */
-
-
-   .header__heading{
-    position:absolute;
-    width: 75%;
-    top:33%;
-    left: 15%;
-    padding: 2%;
-    /* background-color:green; */
-   }
-
-
-   .header__img{
-     position: absolute;
-     top: 75%;
-     left: 50%;
-     transform: translate(-50%,-50%);
-     display: inline-block;
-     width: 12rem;
-     height: 12rem;
-     padding: 2%;
-     margin: 0;
-     animation: fadeUp 1s ease-in;
-   }
-
-   .header__img img{
-      height: 100%;
-      width: 100%;
-      border-radius: 50%;
-      border: 5px solid black;
-   }
-   
-   @keyframes fadeUp{
-     0%{
-      opacity:0;
-      top:80%;
-     }
-
-     50%{
-      opacity: 0.5;
-     }
-
-     100%{
-      opacity: 1;
-       top: 75%; 
-     }
-    
-   }
-
-   h1{
-    z-index: 1;
-    font-size: 1.8rem;
-   }
-
-   p{
-    font-size: .8rem;
-   }
-
+.container {
+  height: 80vh;
+  display: flex;
+  align-items: center;
 }
 
+.card {
+  background-color: #eaeaeac1;
+  padding: 2em;
+  border-radius: 1rem;
+  height: 25rem;
+  width: 100%;
+  max-width: 420px;
+}
 
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 
+button{
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 46px;
+  width: 46px;
+  outline: none;
+  background: #7c7c7c2b;
+  color: rgba(0, 0, 0, 0.679);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover{
+  background: #7c7c7cd2;
+  
+
+} */
+/* 
+input {
+  border: none;
+  outline: none;
+  padding: 0.5em 1em;
+  border-radius: 24px;
+  background: #444343c8;
+  color: #fff;
+  font-family: inherit;
+  font-size: 120%;
+  width: calc(100% - 90px);
+}
+ */
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.3em;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  text-transform: capitalize;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading::after {
+  visibility: visible;
+  content: "loading....";
+  color: green;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+/*CAROUSEL SECTION*/
+
+.blog {
+  background-color: white;
+  height: 100vh;
+}
+
+.blog img {
+  height: 500px;
+  width: 500px;
+  border-radius: 0.5%;
+  margin: 2% auto 0;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+/**FORM SECTION**/
+.form {
+  height: 120vh;
+  padding: 5%;
+}
+/*****FOOTER SECTION***/
+
+footer {
+  height: 20vh;
+  text-align: center;
+
+  background-color: rgb(41, 135, 241);
+}
+
+footer p {
+  padding: 4% 0;
+  padding-bottom: 0;
+}
+
+/***ABOUT SECTION MEDIA QUERRIES***/
+@media only screen and (max-width: 600px) {
+  .about {
+    height: 100vh;
+  }
+
+  .about__para {
+    margin-top: 1.3%;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(227, 140, 41, 0.661);
+
+    padding: 5%;
+
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-bottomright: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    z-index: 0;
+  }
+}
+
+/***GALLERY SECTION MEDIA QUERRIES***/
+@media only screen and (max-width: 600px) {
+  .gallery {
+    height: 100vh;
+  }
+
+  .card {
+    /* background-color: orangeRed; */
+    width: 17rem;
+    height: 15rem;
+    margin: 0 auto;
+    margin: 0.5rem auto 0.8rem;
+    box-shadow: 0px 5px 6px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 5px 6px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 5px 6px 1px rgba(0, 0, 0, 0.75);
+  }
+}
+
+form {
+  padding: 25px;
+  margin: 25px;
+  box-shadow: 0 2px 5px #f5f5f5;
+  background: #f5f5f5;
+}
+.fas {
+  margin: 25px 10px 0;
+  font-size: 72px;
+  color: #fff;
+}
+.fa-envelope {
+  transform: rotate(-20deg);
+}
+.fa-at,
+.fa-mail-bulk {
+  transform: rotate(10deg);
+}
+.form-input,
+textarea {
+  width: calc(100% - 18px);
+  padding: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #1c87c9;
+  outline: none;
+}
+.form-input::placeholder {
+  color: #666;
+}
+
+.form-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #1c87c9;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.form-btn:hover {
+  background: #2371a0;
+}
+
+@media (min-width: 568px) {
+  .main-block {
+    flex-direction: row;
+  }
+  .left-part,
+  form {
+    width: 50%;
+  }
+  .fa-envelope {
+    margin-top: 0;
+    margin-left: 20%;
+  }
+  .fa-at {
+    margin-top: -10%;
+    margin-left: 65%;
+  }
+  .fa-mail-bulk {
+    margin-top: 2%;
+    margin-left: 28%;
+  }
+}
+
+/* https://www.w3docs.com/tools/editor/5872 */
